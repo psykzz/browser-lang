@@ -57,7 +57,7 @@ function getPreferredLanguage(options) {
 
   // en == en_US
   const matchCodeOnly = languages.filter(lang =>
-    startsWith(browserLanguage, lang) || startsWith(lang, browserLanguage)
+    browserLanguage.startsWith(lang) || lang.startsWith(browserLanguage)
   )
   return matchCodeOnly[0] || fallback
 }

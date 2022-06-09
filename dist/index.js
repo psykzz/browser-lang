@@ -61,7 +61,7 @@ function getPreferredLanguage(options) {
 
 
   var matchCodeOnly = languages.filter(function (lang) {
-    return startsWith(browserLanguage, lang) || startsWith(lang, browserLanguage);
+    return browserLanguage.startsWith(lang) || lang.startsWith(browserLanguage);
   });
   return matchCodeOnly[0] || fallback;
 }
